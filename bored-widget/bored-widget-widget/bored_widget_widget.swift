@@ -10,29 +10,43 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+    func placeholder(in context: Context) -> BoredEntry {
+        BoredEntry(date: Date(), activity: "ハワイにイケ")
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (BoredEntry) -> ()) {
+        let entry = BoredEntry(date: Date(), activity: "ハワイにイケ")
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [BoredEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = BoredEntry(date: entryDate, activity: "ボーリングに行こう")
             entries.append(entry)
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
+
+//        URLSession("https://hogehoge.com")
+//            .send()
+//            .subscribe({
+//                 let timeline = makeTimeline($0)
+//                 completion(timeline)
+//            })
+
+
         completion(timeline)
     }
+}
+
+struct BoredEntry: TimelineEntry {
+    var date: Date
+    let activity: String
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -44,7 +58,7 @@ struct bored_widget_widgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        Text(entry.activity)
     }
 }
 
@@ -63,7 +77,7 @@ struct bored_widget_widget: Widget {
 
 struct bored_widget_widget_Previews: PreviewProvider {
     static var previews: some View {
-        bored_widget_widgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        bored_widget_widgetEntryView(entry: BoredEntry(date: Date(), activity: "ハワイにイケ"))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
