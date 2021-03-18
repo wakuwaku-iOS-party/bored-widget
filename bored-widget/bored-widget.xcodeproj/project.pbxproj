@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0BE78B26037AC20082EDF6 /* bored_widgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE78A26037AC20082EDF6 /* bored_widgetApp.swift */; };
+		AA0BE78D26037AC20082EDF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE78C26037AC20082EDF6 /* ContentView.swift */; };
+		AA0BE78F26037AC30082EDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0BE78E26037AC30082EDF6 /* Assets.xcassets */; };
+		AA0BE79226037AC30082EDF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0BE79126037AC30082EDF6 /* Preview Assets.xcassets */; };
+		AA0BE79D26037AC30082EDF6 /* bored_widgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE79C26037AC30082EDF6 /* bored_widgetTests.swift */; };
+		AA0BE7A826037AC30082EDF6 /* bored_widgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE7A726037AC30082EDF6 /* bored_widgetUITests.swift */; };
+		AA0BE7BF26037B350082EDF6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0BE7BE26037B350082EDF6 /* WidgetKit.framework */; };
+		AA0BE7C126037B350082EDF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0BE7C026037B350082EDF6 /* SwiftUI.framework */; };
+		AA0BE7C426037B350082EDF6 /* bored_widget_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE7C326037B350082EDF6 /* bored_widget_widget.swift */; };
+		AA0BE7C726037B360082EDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0BE7C626037B360082EDF6 /* Assets.xcassets */; };
+		AA0BE7C926037B360082EDF6 /* bored_widget_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE7C526037B350082EDF6 /* bored_widget_widget.intentdefinition */; };
+		AA0BE7CA26037B360082EDF6 /* bored_widget_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA0BE7C526037B350082EDF6 /* bored_widget_widget.intentdefinition */; };
+		AA0BE7CD26037B360082EDF6 /* bored-widget-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA0BE7BC26037B350082EDF6 /* bored-widget-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA0BE79926037AC30082EDF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0BE77F26037AC20082EDF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0BE78626037AC20082EDF6;
+			remoteInfo = "bored-widget";
+		};
+		AA0BE7A426037AC30082EDF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0BE77F26037AC20082EDF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0BE78626037AC20082EDF6;
+			remoteInfo = "bored-widget";
+		};
+		AA0BE7CB26037B360082EDF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0BE77F26037AC20082EDF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0BE7BB26037B350082EDF6;
+			remoteInfo = "bored-widget-widgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA0BE7D126037B360082EDF6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA0BE7CD26037B360082EDF6 /* bored-widget-widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA0BE78726037AC20082EDF6 /* bored-widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bored-widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0BE78A26037AC20082EDF6 /* bored_widgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bored_widgetApp.swift; sourceTree = "<group>"; };
+		AA0BE78C26037AC20082EDF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0BE78E26037AC30082EDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0BE79126037AC30082EDF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA0BE79326037AC30082EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0BE79826037AC30082EDF6 /* bored-widgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bored-widgetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0BE79C26037AC30082EDF6 /* bored_widgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bored_widgetTests.swift; sourceTree = "<group>"; };
+		AA0BE79E26037AC30082EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0BE7A326037AC30082EDF6 /* bored-widgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bored-widgetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0BE7A726037AC30082EDF6 /* bored_widgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bored_widgetUITests.swift; sourceTree = "<group>"; };
+		AA0BE7A926037AC30082EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0BE7BC26037B350082EDF6 /* bored-widget-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "bored-widget-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0BE7BE26037B350082EDF6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AA0BE7C026037B350082EDF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AA0BE7C326037B350082EDF6 /* bored_widget_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bored_widget_widget.swift; sourceTree = "<group>"; };
+		AA0BE7C526037B350082EDF6 /* bored_widget_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = bored_widget_widget.intentdefinition; sourceTree = "<group>"; };
+		AA0BE7C626037B360082EDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0BE7C826037B360082EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0BE78426037AC20082EDF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE79526037AC30082EDF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE7A026037AC30082EDF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE7B926037B350082EDF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE7C126037B350082EDF6 /* SwiftUI.framework in Frameworks */,
+				AA0BE7BF26037B350082EDF6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0BE77E26037AC20082EDF6 = {
+			isa = PBXGroup;
+			children = (
+				AA0BE78926037AC20082EDF6 /* bored-widget */,
+				AA0BE79B26037AC30082EDF6 /* bored-widgetTests */,
+				AA0BE7A626037AC30082EDF6 /* bored-widgetUITests */,
+				AA0BE7C226037B350082EDF6 /* bored-widget-widget */,
+				AA0BE7BD26037B350082EDF6 /* Frameworks */,
+				AA0BE78826037AC20082EDF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0BE78826037AC20082EDF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE78726037AC20082EDF6 /* bored-widget.app */,
+				AA0BE79826037AC30082EDF6 /* bored-widgetTests.xctest */,
+				AA0BE7A326037AC30082EDF6 /* bored-widgetUITests.xctest */,
+				AA0BE7BC26037B350082EDF6 /* bored-widget-widgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0BE78926037AC20082EDF6 /* bored-widget */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE78A26037AC20082EDF6 /* bored_widgetApp.swift */,
+				AA0BE78C26037AC20082EDF6 /* ContentView.swift */,
+				AA0BE78E26037AC30082EDF6 /* Assets.xcassets */,
+				AA0BE79326037AC30082EDF6 /* Info.plist */,
+				AA0BE79026037AC30082EDF6 /* Preview Content */,
+			);
+			path = "bored-widget";
+			sourceTree = "<group>";
+		};
+		AA0BE79026037AC30082EDF6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE79126037AC30082EDF6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA0BE79B26037AC30082EDF6 /* bored-widgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE79C26037AC30082EDF6 /* bored_widgetTests.swift */,
+				AA0BE79E26037AC30082EDF6 /* Info.plist */,
+			);
+			path = "bored-widgetTests";
+			sourceTree = "<group>";
+		};
+		AA0BE7A626037AC30082EDF6 /* bored-widgetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE7A726037AC30082EDF6 /* bored_widgetUITests.swift */,
+				AA0BE7A926037AC30082EDF6 /* Info.plist */,
+			);
+			path = "bored-widgetUITests";
+			sourceTree = "<group>";
+		};
+		AA0BE7BD26037B350082EDF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE7BE26037B350082EDF6 /* WidgetKit.framework */,
+				AA0BE7C026037B350082EDF6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA0BE7C226037B350082EDF6 /* bored-widget-widget */ = {
+			isa = PBXGroup;
+			children = (
+				AA0BE7C326037B350082EDF6 /* bored_widget_widget.swift */,
+				AA0BE7C526037B350082EDF6 /* bored_widget_widget.intentdefinition */,
+				AA0BE7C626037B360082EDF6 /* Assets.xcassets */,
+				AA0BE7C826037B360082EDF6 /* Info.plist */,
+			);
+			path = "bored-widget-widget";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0BE78626037AC20082EDF6 /* bored-widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0BE7AC26037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widget" */;
+			buildPhases = (
+				AA0BE78326037AC20082EDF6 /* Sources */,
+				AA0BE78426037AC20082EDF6 /* Frameworks */,
+				AA0BE78526037AC20082EDF6 /* Resources */,
+				AA0BE7D126037B360082EDF6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA0BE7CC26037B360082EDF6 /* PBXTargetDependency */,
+			);
+			name = "bored-widget";
+			productName = "bored-widget";
+			productReference = AA0BE78726037AC20082EDF6 /* bored-widget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA0BE79726037AC30082EDF6 /* bored-widgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0BE7AF26037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widgetTests" */;
+			buildPhases = (
+				AA0BE79426037AC30082EDF6 /* Sources */,
+				AA0BE79526037AC30082EDF6 /* Frameworks */,
+				AA0BE79626037AC30082EDF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA0BE79A26037AC30082EDF6 /* PBXTargetDependency */,
+			);
+			name = "bored-widgetTests";
+			productName = "bored-widgetTests";
+			productReference = AA0BE79826037AC30082EDF6 /* bored-widgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA0BE7A226037AC30082EDF6 /* bored-widgetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0BE7B226037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widgetUITests" */;
+			buildPhases = (
+				AA0BE79F26037AC30082EDF6 /* Sources */,
+				AA0BE7A026037AC30082EDF6 /* Frameworks */,
+				AA0BE7A126037AC30082EDF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA0BE7A526037AC30082EDF6 /* PBXTargetDependency */,
+			);
+			name = "bored-widgetUITests";
+			productName = "bored-widgetUITests";
+			productReference = AA0BE7A326037AC30082EDF6 /* bored-widgetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AA0BE7BB26037B350082EDF6 /* bored-widget-widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0BE7CE26037B360082EDF6 /* Build configuration list for PBXNativeTarget "bored-widget-widgetExtension" */;
+			buildPhases = (
+				AA0BE7B826037B350082EDF6 /* Sources */,
+				AA0BE7B926037B350082EDF6 /* Frameworks */,
+				AA0BE7BA26037B350082EDF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bored-widget-widgetExtension";
+			productName = "bored-widget-widgetExtension";
+			productReference = AA0BE7BC26037B350082EDF6 /* bored-widget-widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0BE77F26037AC20082EDF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					AA0BE78626037AC20082EDF6 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AA0BE79726037AC30082EDF6 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AA0BE78626037AC20082EDF6;
+					};
+					AA0BE7A226037AC30082EDF6 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AA0BE78626037AC20082EDF6;
+					};
+					AA0BE7BB26037B350082EDF6 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = AA0BE78226037AC20082EDF6 /* Build configuration list for PBXProject "bored-widget" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0BE77E26037AC20082EDF6;
+			productRefGroup = AA0BE78826037AC20082EDF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0BE78626037AC20082EDF6 /* bored-widget */,
+				AA0BE79726037AC30082EDF6 /* bored-widgetTests */,
+				AA0BE7A226037AC30082EDF6 /* bored-widgetUITests */,
+				AA0BE7BB26037B350082EDF6 /* bored-widget-widgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0BE78526037AC20082EDF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE79226037AC30082EDF6 /* Preview Assets.xcassets in Resources */,
+				AA0BE78F26037AC30082EDF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE79626037AC30082EDF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE7A126037AC30082EDF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE7BA26037B350082EDF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE7C726037B360082EDF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0BE78326037AC20082EDF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE78D26037AC20082EDF6 /* ContentView.swift in Sources */,
+				AA0BE7CA26037B360082EDF6 /* bored_widget_widget.intentdefinition in Sources */,
+				AA0BE78B26037AC20082EDF6 /* bored_widgetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE79426037AC30082EDF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE79D26037AC30082EDF6 /* bored_widgetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE79F26037AC30082EDF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE7A826037AC30082EDF6 /* bored_widgetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0BE7B826037B350082EDF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0BE7C426037B350082EDF6 /* bored_widget_widget.swift in Sources */,
+				AA0BE7C926037B360082EDF6 /* bored_widget_widget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0BE79A26037AC30082EDF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0BE78626037AC20082EDF6 /* bored-widget */;
+			targetProxy = AA0BE79926037AC30082EDF6 /* PBXContainerItemProxy */;
+		};
+		AA0BE7A526037AC30082EDF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0BE78626037AC20082EDF6 /* bored-widget */;
+			targetProxy = AA0BE7A426037AC30082EDF6 /* PBXContainerItemProxy */;
+		};
+		AA0BE7CC26037B360082EDF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0BE7BB26037B350082EDF6 /* bored-widget-widgetExtension */;
+			targetProxy = AA0BE7CB26037B360082EDF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AA0BE7AA26037AC30082EDF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0BE7AB26037AC30082EDF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA0BE7AD26037AC30082EDF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bored-widget/Preview Content\"";
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "bored-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0BE7AE26037AC30082EDF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bored-widget/Preview Content\"";
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "bored-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0BE7B026037AC30082EDF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widgetTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widgetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bored-widget.app/bored-widget";
+			};
+			name = Debug;
+		};
+		AA0BE7B126037AC30082EDF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widgetTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widgetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bored-widget.app/bored-widget";
+			};
+			name = Release;
+		};
+		AA0BE7B326037AC30082EDF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widgetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widgetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bored-widget";
+			};
+			name = Debug;
+		};
+		AA0BE7B426037AC30082EDF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widgetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widgetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bored-widget";
+			};
+			name = Release;
+		};
+		AA0BE7CF26037B360082EDF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widget-widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widget.bored-widget-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0BE7D026037B360082EDF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9NRS56RXP;
+				INFOPLIST_FILE = "bored-widget-widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k-kohey.bored-widget.bored-widget.bored-widget-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0BE78226037AC20082EDF6 /* Build configuration list for PBXProject "bored-widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0BE7AA26037AC30082EDF6 /* Debug */,
+				AA0BE7AB26037AC30082EDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0BE7AC26037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0BE7AD26037AC30082EDF6 /* Debug */,
+				AA0BE7AE26037AC30082EDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0BE7AF26037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0BE7B026037AC30082EDF6 /* Debug */,
+				AA0BE7B126037AC30082EDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0BE7B226037AC30082EDF6 /* Build configuration list for PBXNativeTarget "bored-widgetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0BE7B326037AC30082EDF6 /* Debug */,
+				AA0BE7B426037AC30082EDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0BE7CE26037B360082EDF6 /* Build configuration list for PBXNativeTarget "bored-widget-widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0BE7CF26037B360082EDF6 /* Debug */,
+				AA0BE7D026037B360082EDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA0BE77F26037AC20082EDF6 /* Project object */;
+}
