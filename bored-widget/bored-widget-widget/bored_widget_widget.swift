@@ -11,50 +11,93 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> BoredEntry {
-        BoredEntry(date: Date(), activity: "ハワイにイケ")
+        BoredEntry(
+            date: Date(),
+            bored: .init(
+                activity: "hoge",
+                type: "hoge",
+                participants: 2,
+                price: 0.5,
+                key: "hoge",
+                accessibility: 0.3
+            )
+        )
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (BoredEntry) -> ()) {
-        let entry = BoredEntry(date: Date(), activity: "ハワイにイケ")
+        let entry = BoredEntry(
+            date: Date(),
+            bored: .init(
+                activity: "hoge",
+                type: "hoge",
+                participants: 2,
+                price: 0.5,
+                key: "hoge",
+                accessibility: 0.3
+            )
+        )
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [BoredEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = BoredEntry(date: entryDate, activity: "ボーリングに行こう")
-            entries.append(entry)
+            let entryDate = Calendar.current.date(byAdding: .minute, value: hourOffset, to: currentDate)!
+
+
+            getBored { bored in
+                let entry = BoredEntry(
+                    date: entryDate,
+                    bored: bored
+                )
+                entries.append(entry)
+            }
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
 
-//        let url = URL(string: "https://www.boredapi.com/api/activity")!
-//        let session = URLSession(configuration: .default)
-//        session.dataTask(with: url) { (data, _, err) in
-//            if err != nil {
-//                     return
-//             }
-//             do {
-//                 let jsonData = try JSONDecoder().decoder(Codable.self, from: data!)
-//                 completion(jsonData)
-//             }
-//             catch {
-//                 print(error.localizedDescription)
-//             }
-//        }
-
-
         completion(timeline)
     }
+
+    func getBored(completion: @escaping ((_ :Bored) -> Void)) {
+        URLSession.shared
+            .dataTask(
+                with: URL(
+                    string: "https://www.boredapi.com/api/activity"
+                )!
+            ) { data, _ ,error in
+                if let error = error {
+                    return
+                }
+
+                do {
+                    let data = try JSONDecoder()
+                        .decode(
+                            Bored.self,
+                            from: data!
+                        )
+                    completion(data)
+                }
+                catch {
+                    print("failed")
+                }
+            }.resume()
+    }
+}
+
+struct Bored: Codable {
+    let activity: String
+    let type: String
+    let participants: Int
+    let price: Double
+    let key: String
+    let accessibility: Double
 }
 
 struct BoredEntry: TimelineEntry {
     var date: Date
-    let activity: String
+    let bored: Bored
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -66,7 +109,7 @@ struct bored_widget_widgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.activity)
+        Text(entry.bored.activity)
     }
 }
 
@@ -85,7 +128,18 @@ struct bored_widget_widget: Widget {
 
 struct bored_widget_widget_Previews: PreviewProvider {
     static var previews: some View {
-        bored_widget_widgetEntryView(entry: BoredEntry(date: Date(), activity: "ハワイにイケ"))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        bored_widget_widgetEntryView(entry: BoredEntry(
+            date: Date(),
+            bored: .init(
+                activity: "hoge",
+                type: "hoge",
+                participants: 2,
+                price: 0.5,
+                key: "hoge",
+                accessibility: 0.3
+            )
+        )
+        )
+        .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
