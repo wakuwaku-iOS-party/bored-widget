@@ -32,12 +32,20 @@ struct Provider: IntentTimelineProvider {
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
 
-//        URLSession("https://hogehoge.com")
-//            .send()
-//            .subscribe({
-//                 let timeline = makeTimeline($0)
-//                 completion(timeline)
-//            })
+//        let url = URL(string: "https://www.boredapi.com/api/activity")!
+//        let session = URLSession(configuration: .default)
+//        session.dataTask(with: url) { (data, _, err) in
+//            if err != nil {
+//                     return
+//             }
+//             do {
+//                 let jsonData = try JSONDecoder().decoder(Codable.self, from: data!)
+//                 completion(jsonData)
+//             }
+//             catch {
+//                 print(error.localizedDescription)
+//             }
+//        }
 
 
         completion(timeline)
