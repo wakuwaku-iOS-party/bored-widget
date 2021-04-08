@@ -20,7 +20,8 @@ struct Provider: IntentTimelineProvider {
                 price: 0.5,
                 key: "hoge",
                 accessibility: 0.3
-            )
+            ),
+            catStatus: .init(data: .init())
         )
     }
 
@@ -34,7 +35,8 @@ struct Provider: IntentTimelineProvider {
                 price: 0.5,
                 key: "hoge",
                 accessibility: 0.3
-            )
+            ),
+            catStatus: .init(data: .init())
         )
         completion(entry)
     }
@@ -43,21 +45,24 @@ struct Provider: IntentTimelineProvider {
         var entries: [BoredEntry] = []
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .minute, value: hourOffset, to: currentDate)!
+            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
 
 
             getBored { bored in
-                let entry = BoredEntry(
-                    date: entryDate,
-                    bored: bored
-                )
-                entries.append(entry)
+                getStatusCode { catStatusCode in
+                    let entry = BoredEntry(
+                        date: entryDate,
+                        bored: bored,
+                        catStatus: catStatusCode
+                    )
+                    entries.append(entry)
+                    if hourOffset == 4 {
+                        let timeline = Timeline(entries: entries, policy: .atEnd)
+                        completion(timeline)
+                    }
+                }
             }
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-
-        completion(timeline)
     }
 
     func getBored(completion: @escaping ((_ :Bored) -> Void)) {
@@ -84,6 +89,25 @@ struct Provider: IntentTimelineProvider {
                 }
             }.resume()
     }
+
+    func getStatusCode(completion: @escaping (_ :CatStatusCode) -> Void) {
+        URLSession
+            .shared
+            .dataTask(
+                with: URL(string: "https://http.cat/200")!
+            ) { data, _, error in
+                if error != nil {
+                    return
+                }
+
+                if let data = data {
+                    let catStatusCode = CatStatusCode(
+                        data: data
+                    )
+                    completion(catStatusCode)
+                }
+            }.resume()
+    }
 }
 
 struct Bored: Codable {
@@ -95,9 +119,14 @@ struct Bored: Codable {
     let accessibility: Double
 }
 
+struct CatStatusCode: Codable {
+    let data: Data
+}
+
 struct BoredEntry: TimelineEntry {
     var date: Date
     let bored: Bored
+    let catStatus: CatStatusCode
 }
 
 struct SimpleEntry: TimelineEntry {
@@ -109,7 +138,16 @@ struct bored_widget_widgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.bored.activity)
+        ZStack {
+            Image(
+                uiImage: UIImage(
+                    data: entry.catStatus.data
+                ) ?? .init()
+            )
+            .resizable()
+            .scaledToFill()
+            Text(entry.bored.activity)
+        }
     }
 }
 
@@ -137,7 +175,8 @@ struct bored_widget_widget_Previews: PreviewProvider {
                 price: 0.5,
                 key: "hoge",
                 accessibility: 0.3
-            )
+            ),
+            catStatus: .init(data: .init())
         )
         )
         .previewContext(WidgetPreviewContext(family: .systemSmall))
